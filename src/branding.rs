@@ -1,3 +1,4 @@
+use base::config::keys;
 use hbb_common::config;
 
 const APP_NAME: &str = "AlloDesk";
@@ -19,4 +20,9 @@ pub fn apply() {
     if !RS_PUB_KEY.is_empty() {
         defaults.insert("key".to_owned(), RS_PUB_KEY.to_owned());
     }
+    drop(defaults);
+    config::DEFAULT_LOCAL_SETTINGS
+        .write()
+        .unwrap()
+        .insert(keys::OPTION_THEME.to_owned(), "dark".to_owned());
 }

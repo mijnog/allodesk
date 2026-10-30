@@ -65,8 +65,22 @@ is NOT forked; all branding is applied at runtime from `src/branding.rs`.
 6. [ ] Committed and pushed. On GitHub: enable Actions, disable upstream
    workflows (especially "Full Flutter CI"), then run "AlloDesk build".
 7. [ ] Remaining branding:
-   - icons in `res/` and `flutter/assets/`, from the logo face;
-   - colours in `flutter/lib/common.dart` (`MyTheme.accent`, currently #0071FF);
+   - DONE locally, not committed: icons (cropped face from the website logo;
+     `res/*.png|ico`, `flutter/macos/Runner/AppIcon.icns`, Windows `app_icon.ico`,
+     `flutter/assets/icon.png`). `flutter/assets/icon.png` is gitignored by `*png`:
+     use `git add -f`. Swap in the owner's original logo
+     files when available. `res/mac-tray-*.png` (macOS menu bar) NOT replaced yet;
+   - DECIDED: no home-screen logo (deleted `logo_light/dark.png`; icon only);
+     default theme dark via `DEFAULT_LOCAL_SETTINGS` in `src/branding.rs` (users can
+     still switch; "system" is saved explicitly for custom builds). Not yet
+     compile-checked or seen in a real build.
+   - Preview page (mock-up, link-shared): https://claude.ai/artifact/8rag2LFHqM4mBrwU4JnnWF
+   - DONE locally (flutter/lib/common.dart): light accent/button = mid green
+     #1D7E47 (`MyTheme.accent`, `button`). Dark theme: the Connect/elevated button
+     fill = deep green #0C5E2F (`MyTheme.accentDark`); colour scheme primary and
+     secondary stay mid green (deep green is only ~1.9:1 on the dark background, so
+     unsuitable for text, switches, outlines). Owner chose mid-light / deep-dark;
+     outlined buttons are neutral grey in the real app; `MyTheme.idColor` (blue) left as is;
    - the "RustDesk" strings in about 18 Flutter files;
    - bundle and binary names (`RustDesk.app`, `rustdesk.exe`, MSI product name);
    - maybe French by default, and phone number or tagline on the home screen.
