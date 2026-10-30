@@ -169,8 +169,10 @@ jobs:
 
       - name: Build msi
         run: |
+          # preprocess.py finds the app as <app-name>.exe in the dist folder
+          mv ./rustdesk/rustdesk.exe ./rustdesk/AlloDesk.exe
           pushd ./res/msi
-          python preprocess.py --arp -d ../../rustdesk
+          python preprocess.py --arp -d ../../rustdesk --app-name AlloDesk
           nuget restore msi.sln
           msbuild msi.sln -p:Configuration=Release -p:Platform=x64 /p:TargetVersion=Windows10
           $msi = Get-ChildItem ./Package/bin/*/Release/en-us/Package.msi | Select-Object -First 1
