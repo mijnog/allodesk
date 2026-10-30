@@ -1,10 +1,10 @@
 # Politique de confidentialité – AlloDesk
 
-> **BROUILLON, à compléter avant publication.** Les passages entre crochets
-> `[À COMPLÉTER]` ou `[À CONFIRMER]` sont à renseigner ou à vérifier par
-> Allo Geek. Faites relire le texte avant de le mettre en ligne.
+> **BROUILLON, à vérifier avant publication.** Les passages `[À CONFIRMER]`
+> sont des affirmations qu'Allo Geek doit confirmer. Supprimez ce bandeau une
+> fois fait, et faites relire le texte avant de le mettre en ligne.
 
-*Dernière mise à jour : [DATE DE PUBLICATION]*
+*Dernière mise à jour : 30 octobre 2026*
 
 AlloDesk est le logiciel de prise en main à distance d'**Allo Geek**. Il nous
 permet de dépanner votre ordinateur sans nous déplacer, avec votre accord et
@@ -13,9 +13,9 @@ vous l'utilisez, et vos droits.
 
 ## 1. Qui est responsable ?
 
-**Allo Geek** – [RAISON SOCIALE ET FORME JURIDIQUE] – SIRET [NUMÉRO] – Côte
-Basque, France.
-Contact : [ADRESSE E-MAIL] ou +33 7 49 25 89 72.
+**Allo Geek** – micro-entreprise – SIRET 107 499 139 00015 – Côte Basque,
+France.
+Contact : info@allo-geek.com ou +33 7 49 25 89 72.
 
 ## 2. Ce qui se passe pendant un dépannage
 
@@ -69,9 +69,9 @@ n'utilisons ni publicité, ni statistiques d'usage, ni outil de suivi.
 - **Pourquoi :** exécuter le dépannage que vous nous avez demandé, et assurer la
   sécurité de notre service. Base légale : l'exécution de la prestation et
   notre intérêt légitime à protéger le service (RGPD, art. 6.1.b et 6.1.f).
-- **Combien de temps :** les informations de l'appareil sont conservées
-  [DURÉE, par exemple 12 mois après la dernière connexion], puis supprimées.
-  Vous pouvez demander leur suppression plus tôt.
+- **Combien de temps :** les informations de l'appareil sont conservées 30 jours
+  au maximum, puis supprimées. Un appareil encore utilisé se réinscrit
+  automatiquement. Vous pouvez demander leur suppression plus tôt.
 - **Avec qui :** nous ne vendons, ne louons et ne transmettons ces données à
   personne, sauf obligation légale.
 - **Hors de l'Union européenne :** aucun transfert.
@@ -81,7 +81,7 @@ n'utilisons ni publicité, ni statistiques d'usage, ni outil de suivi.
 Vous pouvez nous demander l'accès aux données qui vous concernent, leur
 rectification ou leur suppression, vous opposer à leur traitement ou en
 demander la limitation, conformément au RGPD. Écrivez-nous à
-[ADRESSE E-MAIL] en indiquant l'identifiant AlloDesk de votre appareil (il
+info@allo-geek.com en indiquant l'identifiant AlloDesk de votre appareil (il
 s'affiche dans la fenêtre du logiciel), afin que nous puissions retrouver vos
 données. Nous répondons sous un mois.
 

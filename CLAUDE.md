@@ -100,15 +100,15 @@ is NOT forked; all branding is applied at runtime from `src/branding.rs`.
      installer page's "End-user license agreement" link
      (`desktop/pages/install_page.dart`) and the mobile settings page. Decide whether
      to write an Allo Geek privacy/terms page and repoint them;
-   - `PRIVACY.md` (French draft, uncommitted): owner will publish it on allo-geek.com
-     later. Placeholders to fill: company name/SIRET, email, retention periods, and
-     the [À CONFIRMER] claims (no session recording; relay only forwards encrypted
-     data; no telemetry). Server really stores only: id, public key, first-seen date,
-     IP (peer table `info` = {"ip"}), plus hbbs container logs. Server logs: 30 days max
-     (decided). Docker has no max age, so `~/allodesk-server/rotate-logs.sh`
-     recreates hbbs/hbbr on the 1st of each month (user timer
-     `allodesk-log-rotate.timer`, plus size caps in compose.yml). Owner must enable
-     it (see below); remaining placeholder: retention of device records;
+   - `PRIVACY.md` (French draft): identity (micro-entreprise, SIRET, info@allo-geek.com)
+     and date filled 2026-10-30. Still [À CONFIRMER]: no session recording; relay only
+     forwards encrypted data; no telemetry (check on final build). Promises: server
+     logs 30 days max (`~/allodesk-server/rotate-logs.sh`, monthly user timer
+     `allodesk-log-rotate.timer`, size caps in compose.yml; owner must enable it) and
+     device records 30 days max (owner's decision). TODO: build the purge for device records (peer table
+     has `created_at` only, no last-seen; delete rows older than 30 days by
+     created_at, ideally inside `rotate-logs.sh` so one monthly job covers logs and records, after testing that an active client re-registers). Possibly add the
+     owner's own name to the policy (identity of controller), and publish the page.
    - maybe French by default, and phone number or tagline on the home screen.
 8. [ ] Optional: local Linux builds. Needs `sudo pacman -S --needed cmake nasm
    yasm ninja xdotool libappindicator-gtk3`, Flutter 3.24.5 in `~/flutter`,
