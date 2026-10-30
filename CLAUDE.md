@@ -65,7 +65,7 @@ is NOT forked; all branding is applied at runtime from `src/branding.rs`.
 6. [x] Pushed; first "AlloDesk build" (commit 727cd33, 2026-10-30) produced
    Windows `.exe` + `.msi` and Intel Mac `.dmg` in the `nightly` prerelease:
    https://github.com/mijnog/allodesk/releases/tag/nightly . The Apple Silicon job
-   never ran (queued, then cancelled; cause unknown). Those files predate icons,
+   was cancelled in ~1s because GitHub is retiring the `macos-14` runner image (brownouts; retired 2026-11-02). Fixed locally by switching that job to `macos-15` (uncommitted). Those files predate icons,
    colours, dark default and name changes. TODO: re-run "AlloDesk build" on the latest
    master, install the .exe/.msi in the Windows VM, check: name, server pre-set
    ("Ready" without touching settings), dark default, icons, Connect button colour,
