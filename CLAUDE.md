@@ -62,8 +62,14 @@ is NOT forked; all branding is applied at runtime from `src/branding.rs`.
    21115:21117/tcp and 21116/udp. This PC (Hyprland) can't be controlled: its
    portal has no RemoteDesktop interface. Controlling FROM it works (tested PC to
    phone over 4G).
-6. [ ] Committed and pushed. On GitHub: enable Actions, disable upstream
-   workflows (especially "Full Flutter CI"), then run "AlloDesk build".
+6. [x] Pushed; first "AlloDesk build" (commit 727cd33, 2026-10-30) produced
+   Windows `.exe` + `.msi` and Intel Mac `.dmg` in the `nightly` prerelease:
+   https://github.com/mijnog/allodesk/releases/tag/nightly . The Apple Silicon job
+   never ran (queued, then cancelled; cause unknown). Those files predate icons,
+   colours, dark default and name changes. TODO: re-run "AlloDesk build" on the latest
+   master, install the .exe/.msi in the Windows VM, check: name, server pre-set
+   ("Ready" without touching settings), dark default, icons, Connect button colour,
+   MSI shortcuts/folder say AlloDesk. Disable "Full Flutter CI" on GitHub.
 7. [ ] Remaining branding:
    - DONE locally, not committed: icons (cropped face from the website logo;
      `res/*.png|ico`, `flutter/macos/Runner/AppIcon.icns`, Windows `app_icon.ico`,
