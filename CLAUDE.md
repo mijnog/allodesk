@@ -45,6 +45,38 @@ is NOT forked; all branding is applied at runtime from `src/branding.rs`.
   Publishes a prerelease. Trimmed from `flutter-build.yml`.
 - `libs/hbb_common` submodule initialised.
 
+## Where we left off (end of session 1, 2026-10-30)
+
+Everything is committed and pushed to `mijnog/allodesk` master (latest `3167386`+).
+Preview mock-up (icons, colours, name toggle): https://claude.ai/artifact/8rag2LFHqM4mBrwU4JnnWF
+
+Immediate to-do, in order:
+1. Owner: start "AlloDesk build" again (Actions > Run workflow). The Apple Silicon job
+   was cancelled in ~1s on `macos-14` (retired runner image); fixed by `macos-15`
+   (commit 3167386) but NOT yet seen working. Check that job actually starts.
+2. Owner: install `allodesk-1.5.1-x86_64.exe` (or `.msi`) from
+   https://github.com/mijnog/allodesk/releases/tag/nightly in the Windows VM and
+   report: AlloDesk name and face icon, dark by default, "Ready" with no settings
+   touched, deep-green Connect button, working connection from phone/PC. MSI: Start
+   menu/shortcuts/install folder should say AlloDesk. Ask for screenshots.
+3. Owner: on GitHub disable the "Full Flutter CI" workflow (fails at startup, useless).
+4. Owner: enable the server log reset (after re-login so docker works without sudo):
+   `cd ~/allodesk-server && docker compose up -d --force-recreate && systemctl --user enable --now allodesk-log-rotate.timer`
+   (optionally `sudo loginctl enable-linger max`).
+5. Agent: build the 30-day purge of the server's device records (see PRIVACY.md note
+   below) before the privacy page goes live.
+6. Agent: check the [À CONFIRMER] claims in PRIVACY.md on the final build (relay
+   forwards only encrypted data; no telemetry), then owner confirms the no-recording claim.
+7. Later: original logo artwork from the owner; Mac menu-bar icons; Mac/Windows
+   signing when customers are onboarded; website privacy page; repoint the installer's
+   "End-user license agreement" link; consider locking the server/key/theme
+   (OVERWRITE settings) before distributing.
+
+Owner preferences: speaks to the agent in English, customers/website/legal text in
+French; wants to be asked before commit/push; prefers simple step-by-step instructions
+(runs commands himself with `! cmd`); this PC runs Hyprland (cannot be remote-controlled,
+can control others), ufw (ports 21115-21117 tcp, 21116 udp opened), Tailscale and Eddie VPN.
+
 ## Next steps
 
 1. [x] Freebox restarted; `curl -4 ifconfig.me` shows 82.67.254.214 (2026-10-30).
